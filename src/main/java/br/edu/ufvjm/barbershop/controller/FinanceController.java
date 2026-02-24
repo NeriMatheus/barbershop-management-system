@@ -24,7 +24,7 @@ public class FinanceController {
         LocalDateTime start = date.atStartOfDay();
         LocalDateTime end = date.atTime(23, 59, 59);
 
-        return new SalesReport(orders, start, end);
+        return new SalesReport(orders, start, end); m
     }
 
     public SalesReport generateMonthlySalesReport(
