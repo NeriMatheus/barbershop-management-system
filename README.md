@@ -1,14 +1,14 @@
 # 💈 Barbershop Management System ✂️
 
 A barbershop management system developed in Java.  
-The application allows the management of customers, employees, and service appointments, helping organize the daily operations of a barbershop efficiently. 🕒💇‍♂️💇‍♀️
+The application allows the management of customers, employees, and service appointments, helping organize the daily operations of a barbershop efficiently. 
 
 ## 🛠️ Technologies
 
-- Java ☕
-- Object-Oriented Programming (OOP) 🧩
-- Maven 📦
-- Swing (GUI) 🎨
+- Java 
+- Object-Oriented Programming (OOP) 
+- Maven 
+- Swing (GUI) 
 
 ## ✨ Features
 
