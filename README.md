@@ -12,14 +12,14 @@ The application allows the management of customers, employees, and service appoi
 
 ## ✨ Features
 
-- 🧑‍🤝‍🧑 Customer registration – Add, edit, and remove customer data  
-- 💼 Employee registration – Manage barbers and staff information  
-- 📅 Service scheduling – Book appointments with available barbers  
-- ⏰ Appointment management – View, update, and cancel appointments  
-- 💰 Payment tracking – Track payments for services rendered  
-- 📝 Service catalog – Define available services (haircuts, shaves, etc.)  
-- 🔍 Search and filtering – Quickly find customers, employees, or appointments  
-- 📊 Reporting – Generate simple reports for appointments and revenue  
+- Customer registration – Add, edit, and remove customer data  
+- Employee registration – Manage barbers and staff information  
+- Service scheduling – Book appointments with available barbers  
+- Appointment management – View, update, and cancel appointments  
+- Payment tracking – Track payments for services rendered  
+- Service catalog – Define available services (haircuts, shaves, etc.)  
+- Search and filtering – Quickly find customers, employees, or appointments  
+- Reporting – Generate simple reports for appointments and revenue  
 
 ## 🎯 Purpose
 
