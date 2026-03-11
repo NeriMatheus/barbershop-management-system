@@ -12,7 +12,6 @@ public record Address(String street, String number, String neighborhood, String 
             throw new IllegalArgumentException("No field can be null or empty.");
         }
 
-        // REMOVE TUDO QUE NÃO SEJA NÚMERO
         zipCode = zipCode.replaceAll("\\D", "");
 
         if (zipCode.length() != 8) {
@@ -24,17 +23,14 @@ public record Address(String street, String number, String neighborhood, String 
         return zipCode.substring(0, 5) + "-" + zipCode.substring(5);
     }
 
-
-    // ENDEREÇO PREENCHIDO
     public String getFullAddress() {
         return street() + ", " +
-                number + " - " +
-                neighborhood + " - " +
-                city + " - ZIP: " +
+                number() + " - " +
+                neighborhood() + " - " +
+                city() + " - ZIP: " +
                 getFormattedZipCode();
     }
 
-    // SAÍDA DO CAMPO ENDEREÇO PREENCHIDO
     @Override
     public String toString() {
         return getFullAddress();
