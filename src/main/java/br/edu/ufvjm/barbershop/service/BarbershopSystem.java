@@ -22,7 +22,7 @@ public class BarbershopSystem {
         ));
     }
 
-    // ESTAÇÕES
+    // Stations
     public List<Station> getStations() {
         return List.copyOf(stations);
     }
@@ -60,7 +60,7 @@ public class BarbershopSystem {
         }
     }
 
-    // FILA SECUNDÁRIA
+    // Secondary Queue
     public void addToSecondaryQueue(Appointment appointment) {
         if (appointment == null) {
             throw new IllegalArgumentException("Appointment cannot be null.");
@@ -80,7 +80,7 @@ public class BarbershopSystem {
         return !secondaryQueue.isEmpty();
     }
 
-    // OUTPUT
+    // Output
     @Override
     public String toString() {
         return getClass().getSimpleName()

@@ -54,7 +54,7 @@ public class MainFrame extends JFrame {
         root.add(buttonPanel, BorderLayout.CENTER);
         setContentPane(root);
 
-        // AÇÕES
+        // Actions
         btnServices.addActionListener(e ->
                 new ServiceFrame(serviceController).setVisible(true)
         );

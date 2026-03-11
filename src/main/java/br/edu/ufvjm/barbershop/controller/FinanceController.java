@@ -17,7 +17,7 @@ public class FinanceController {
     public FinanceController() {
     }
 
-    // DESPESAS
+    // Expenses
     public void addExpense(Expense expense) {
         if (expense == null) {
             throw new IllegalArgumentException("Expense cannot be null.");
@@ -29,7 +29,7 @@ public class FinanceController {
         return new ArrayList<>(expenses);
     }
 
-    // ORDENS
+    // Orders
     public void addServiceOrder(ServiceOrder order) {
         if (order == null) {
             throw new IllegalArgumentException("Service order cannot be null.");
@@ -41,7 +41,7 @@ public class FinanceController {
         return new ArrayList<>(orders);
     }
 
-    // RELATÓRIOS
+    // Sales report
     public SalesReport generateDailySalesReport(LocalDate date) {
         if (date == null)
             throw new IllegalArgumentException("Date is required.");
@@ -63,7 +63,7 @@ public class FinanceController {
         );
     }
 
-    //  BALANÇO
+    //  Balance
     public String generateMonthlyBalance(int year, int month) {
 
         SalesReport report = generateMonthlySalesReport(year, month);

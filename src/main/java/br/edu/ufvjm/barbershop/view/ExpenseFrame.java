@@ -36,7 +36,7 @@ public class ExpenseFrame extends JFrame {
         JPanel root = new JPanel(new BorderLayout(10, 10));
         root.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        // FORMULÁRIO
+        // Form
         JPanel formPanel = new JPanel(new GridBagLayout());
         formPanel.setBorder(BorderFactory.createTitledBorder("Add Expense"));
 
@@ -75,7 +75,7 @@ public class ExpenseFrame extends JFrame {
         gbc.gridx = 1;
         formPanel.add(txtDate, gbc);
 
-        // BOTÕES
+        // Buttons
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 5));
         JButton btnAdd = new JButton("Add expense");
         JButton btnRefresh = new JButton("Refresh list");
@@ -89,7 +89,7 @@ public class ExpenseFrame extends JFrame {
         left.add(formPanel, BorderLayout.CENTER);
         left.add(buttonPanel, BorderLayout.SOUTH);
 
-        // TABELA
+        // Table
         tableModel = new DefaultTableModel(
                 new Object[]{"ID", "Description", "Value", "Date"}, 0) {
             @Override
@@ -109,7 +109,7 @@ public class ExpenseFrame extends JFrame {
 
         setContentPane(root);
 
-        // AÇÕES
+        // Actions
         btnAdd.addActionListener(e -> addExpense());
         btnRefresh.addActionListener(e -> loadTable());
         btnClear.addActionListener(e -> clearFields());

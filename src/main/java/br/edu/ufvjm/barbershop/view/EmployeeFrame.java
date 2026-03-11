@@ -38,7 +38,7 @@ public class EmployeeFrame extends JFrame {
         JPanel root = new JPanel(new BorderLayout(10, 10));
         root.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        // FORMULÁRIO
+        // Form
         JPanel form = new JPanel(new GridBagLayout());
         form.setBorder(BorderFactory.createTitledBorder("Employee Data"));
 
@@ -73,7 +73,7 @@ public class EmployeeFrame extends JFrame {
         gbc.gridx = 0; gbc.gridy = row; form.add(new JLabel("Salary:"), gbc);
         gbc.gridx = 1; form.add(txtSalary, gbc);
 
-        // BOTÕES
+        // Buttons
         JPanel buttons = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 5));
         JButton btnNew = new JButton("New / Clear");
         JButton btnSave = new JButton("Save");
@@ -91,7 +91,7 @@ public class EmployeeFrame extends JFrame {
         left.add(form, BorderLayout.CENTER);
         left.add(buttons, BorderLayout.SOUTH);
 
-        // TABELA
+        // Table
         model = new DefaultTableModel(
                 new Object[]{"ID", "Name", "Position", "Login", "Salary"}, 0
         ) {
@@ -112,7 +112,7 @@ public class EmployeeFrame extends JFrame {
 
         setContentPane(root);
 
-        // AÇÕES
+        // Actions
         btnNew.addActionListener(e -> clearFields());
         btnSave.addActionListener(e -> saveEmployee());
         btnSearch.addActionListener(e -> searchEmployee());

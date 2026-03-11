@@ -14,8 +14,7 @@ public class AppointmentController {
         this.system = system;
     }
 
-    // FILA SECUNDÁRIA
-
+    // Secondary Queue
     public void addToSecondaryQueue(Appointment appointment) {
         system.addToSecondaryQueue(appointment);
     }
@@ -28,8 +27,7 @@ public class AppointmentController {
         return system.hasPendingSecondaryAppointments();
     }
 
-    // STATUS DO AGENDAMENTO
-
+    // Appointment status
     public void confirmAppointment(Appointment appointment) {
         if (appointment == null) {
             throw new IllegalArgumentException("Appointment cannot be null.");

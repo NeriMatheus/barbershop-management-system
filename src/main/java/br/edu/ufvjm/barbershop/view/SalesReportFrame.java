@@ -31,7 +31,7 @@ public class SalesReportFrame extends JFrame {
         JPanel root = new JPanel(new BorderLayout(10, 10));
         root.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        // FILTROS
+        // Filters
         JPanel filters = new JPanel(new GridBagLayout());
         filters.setBorder(BorderFactory.createTitledBorder("Period"));
 
@@ -58,7 +58,7 @@ public class SalesReportFrame extends JFrame {
         gbc.gridx = 1;
         filters.add(txtYear, gbc);
 
-        // BOTÕES
+        // Buttons
         JPanel buttons = new JPanel(new GridLayout(3, 1, 5, 5));
         JButton btnDaily = new JButton("Daily Report");
         JButton btnMonthly = new JButton("Monthly Report");
@@ -72,7 +72,7 @@ public class SalesReportFrame extends JFrame {
         left.add(filters, BorderLayout.CENTER);
         left.add(buttons, BorderLayout.SOUTH);
 
-        // SAÍDA
+        // Output
         txtOutput = new JTextArea();
         txtOutput.setEditable(false);
         JScrollPane scroll = new JScrollPane(txtOutput);
@@ -83,7 +83,7 @@ public class SalesReportFrame extends JFrame {
 
         setContentPane(root);
 
-        // AÇÕES
+        // Actions
         btnDaily.addActionListener(e -> generateDaily());
         btnMonthly.addActionListener(e -> generateMonthly());
         btnBalance.addActionListener(e -> generateMonthlyBalance());

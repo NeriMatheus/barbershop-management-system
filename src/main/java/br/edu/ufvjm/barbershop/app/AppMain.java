@@ -1,6 +1,5 @@
 package br.edu.ufvjm.barbershop.app;
 
-import br.edu.ufvjm.barbershop.controller.FinanceController;
 import br.edu.ufvjm.barbershop.controller.ServiceController;
 import br.edu.ufvjm.barbershop.controller.ServiceOrderController;
 import br.edu.ufvjm.barbershop.service.BarbershopSystem;

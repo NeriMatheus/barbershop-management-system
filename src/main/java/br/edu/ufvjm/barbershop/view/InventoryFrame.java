@@ -32,7 +32,7 @@ public class InventoryFrame extends JFrame {
         JPanel root = new JPanel(new BorderLayout(10, 10));
         root.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        // FORMULÁRIO
+        // Form
         JPanel formPanel = new JPanel(new GridBagLayout());
         formPanel.setBorder(BorderFactory.createTitledBorder("Inventory Movement"));
 
@@ -53,7 +53,7 @@ public class InventoryFrame extends JFrame {
         gbc.gridx = 1;
         formPanel.add(txtQuantity, gbc);
 
-        // BOTÕES
+        // Buttons
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 5));
         JButton btnSell = new JButton("Register sale");
         JButton btnReceive = new JButton("Receive from supplier");
@@ -67,7 +67,7 @@ public class InventoryFrame extends JFrame {
         left.add(formPanel, BorderLayout.CENTER);
         left.add(buttonPanel, BorderLayout.SOUTH);
 
-        // TABELA
+        // Table
         tableModel = new DefaultTableModel(
                 new Object[]{"ID", "Name", "Type", "Price", "Quantity"}, 0) {
             @Override
@@ -87,7 +87,7 @@ public class InventoryFrame extends JFrame {
 
         setContentPane(root);
 
-        // AÇÕES
+        // Actions
         btnSell.addActionListener(e -> sellProduct());
         btnReceive.addActionListener(e -> receiveProduct());
         btnRefresh.addActionListener(e -> loadTable());

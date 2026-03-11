@@ -15,7 +15,7 @@ public class AppointmentFrame extends JFrame {
 
     private final AppointmentController controller;
 
-    // FORMULÁRIO
+    // Form
     private JComboBox<Customer> cbCustomer;
     private JComboBox<Employee> cbEmployee;
     private JComboBox<Service> cbService;
@@ -23,7 +23,7 @@ public class AppointmentFrame extends JFrame {
     private JTextField txtAmount;
     private JTextArea txtDescription;
 
-    // BOTÕES
+    // Buttons
     private JButton btnSchedule;
     private JButton btnConfirm;
     private JButton btnCancel;
@@ -52,8 +52,7 @@ public class AppointmentFrame extends JFrame {
         add(panel);
     }
 
-    // FORMULÁRIO
-
+    // Form
     private JPanel createFormPanel() {
         JPanel form = new JPanel(new GridLayout(6, 2, 5, 5));
 
@@ -85,8 +84,7 @@ public class AppointmentFrame extends JFrame {
         return form;
     }
 
-    // BOTÕES
-
+    // Buttons
     private JPanel createButtonPanel() {
         JPanel buttons = new JPanel(new FlowLayout(FlowLayout.RIGHT));
 
@@ -108,8 +106,7 @@ public class AppointmentFrame extends JFrame {
         return buttons;
     }
 
-    // AÇÕES
-
+    // Actions
     private void scheduleAppointment() {
         try {
             Appointment appointment = new Appointment.Builder()
@@ -158,8 +155,7 @@ public class AppointmentFrame extends JFrame {
         }
     }
 
-    // UTILS
-
+    // Utils
     private void showError(String message) {
         JOptionPane.showMessageDialog(
                 this,

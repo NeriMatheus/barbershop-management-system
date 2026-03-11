@@ -31,7 +31,7 @@ public class ServiceFrame extends JFrame {
         JPanel root = new JPanel(new BorderLayout(10, 10));
         root.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        // FORMULÁRIO
+        // Form
         JPanel formPanel = new JPanel(new GridBagLayout());
         formPanel.setBorder(BorderFactory.createTitledBorder("Service Data"));
 
@@ -56,7 +56,7 @@ public class ServiceFrame extends JFrame {
         gbc.gridx = 1;
         formPanel.add(txtValue, gbc);
 
-        // BOTÕES
+        // Buttons
         JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 5));
         JButton btnClear = new JButton("New / Clear");
         JButton btnSave = new JButton("Save");
@@ -70,7 +70,7 @@ public class ServiceFrame extends JFrame {
         leftPanel.add(formPanel, BorderLayout.CENTER);
         leftPanel.add(buttonsPanel, BorderLayout.SOUTH);
 
-        // TABELA
+        // Table
         tableModel = new DefaultTableModel(
                 new Object[]{"Type", "Value"}, 0
         ) {
@@ -93,7 +93,7 @@ public class ServiceFrame extends JFrame {
 
         setContentPane(root);
 
-        // AÇÕES
+        // Actions
         btnClear.addActionListener(e -> clearForm());
         btnSave.addActionListener(e -> saveService());
         btnRefresh.addActionListener(e -> loadTable());

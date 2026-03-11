@@ -31,7 +31,7 @@ public class ServiceOrderFrame extends JFrame {
         JPanel root = new JPanel(new BorderLayout(10, 10));
         root.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        // TOPO
+        // Top
         JPanel top = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 5));
         top.add(new JLabel("Filter by Customer ID:"));
         txtFilterCustomerId = new JTextField(10);
@@ -43,7 +43,7 @@ public class ServiceOrderFrame extends JFrame {
         top.add(btnFilter);
         top.add(btnAll);
 
-        // TABELA
+        // Table
         model = new DefaultTableModel(
                 new Object[]{"OS ID", "Customer", "Service", "Total Amount", "Executed At"},
                 0
@@ -58,7 +58,7 @@ public class ServiceOrderFrame extends JFrame {
         table.setRowHeight(22);
         JScrollPane tableScroll = new JScrollPane(table);
 
-        // DETALHES
+        // Details
         txtDetails = new JTextArea();
         txtDetails.setEditable(false);
         JScrollPane detailsScroll = new JScrollPane(txtDetails);
@@ -78,7 +78,7 @@ public class ServiceOrderFrame extends JFrame {
 
         setContentPane(root);
 
-        // AÇÕES
+        // Actions
         btnFilter.addActionListener(e -> loadTableByCustomer());
         btnAll.addActionListener(e -> loadAll());
 

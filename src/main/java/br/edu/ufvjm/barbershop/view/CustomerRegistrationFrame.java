@@ -13,25 +13,25 @@ public class CustomerRegistrationFrame extends JFrame {
 
     private final CustomerController controller;
 
-    // CLIENTE
+    // Customer
     private JTextField txtId;
     private JTextField txtName;
     private JTextField txtEmail;
     private JTextField txtCpf;
 
-    // TELEFONE
+    // Phone
     private JTextField txtDdi;
     private JTextField txtDdd;
     private JTextField txtPhoneNumber;
 
-    // ENDEREÇO
+    // Address
     private JTextField txtStreet;
     private JTextField txtNumber;
     private JTextField txtNeighborhood;
     private JTextField txtCity;
     private JTextField txtZipCode;
 
-    // TABELA
+    // Table
     private JTable table;
     private DefaultTableModel tableModel;
 
@@ -49,7 +49,7 @@ public class CustomerRegistrationFrame extends JFrame {
         JPanel root = new JPanel(new BorderLayout(10, 10));
         root.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-            // FORMULÁRIO
+        // Form
         JPanel form = new JPanel(new GridLayout(0, 2, 5, 5));
         form.setBorder(BorderFactory.createTitledBorder("Customer Data"));
 
@@ -104,7 +104,7 @@ public class CustomerRegistrationFrame extends JFrame {
         form.add(new JLabel("ZIP Code:"));
         form.add(txtZipCode);
 
-        // BOTÕES
+        // Buttons
         JPanel buttons = new JPanel(new FlowLayout(FlowLayout.LEFT));
 
         JButton btnSave = new JButton("Save");
@@ -126,7 +126,7 @@ public class CustomerRegistrationFrame extends JFrame {
         left.add(form, BorderLayout.CENTER);
         left.add(buttons, BorderLayout.SOUTH);
 
-        // TABELA
+        // Table
         tableModel = new DefaultTableModel(
                 new Object[]{"ID", "Name", "Email", "CPF"}, 0
         ) {
@@ -147,8 +147,7 @@ public class CustomerRegistrationFrame extends JFrame {
         loadTable();
     }
 
-    //  AÇÕES
-
+    // Actions
     private void saveCustomer() {
         try {
             Long id = Long.parseLong(txtId.getText().trim());
