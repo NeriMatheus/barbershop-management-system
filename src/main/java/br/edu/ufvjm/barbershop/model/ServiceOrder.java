@@ -31,7 +31,7 @@ public class ServiceOrder {
         this.executedAt = LocalDateTime.now();
     }
 
-    // GETTERS
+    // Getters
     public Long getId() {
         return id;
     }
@@ -56,7 +56,7 @@ public class ServiceOrder {
         return executedAt;
     }
 
-    // REGRAS DE NEGÓCIO
+    // Business rules
     public void pay() {
         if (status != ServiceOrderStatus.OPEN) {
             throw new IllegalStateException("Only open service orders can be paid.");
@@ -72,7 +72,7 @@ public class ServiceOrder {
     }
 
 
-    // HASHCODE
+    // Hashcode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -86,7 +86,7 @@ public class ServiceOrder {
         return Objects.hash(id);
     }
 
-    // OUTPUT
+    // Output
     @Override
     public String toString() {
         return getClass().getSimpleName()

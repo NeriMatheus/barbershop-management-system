@@ -28,7 +28,7 @@ public class SalesReport {
         this.endPeriod = endPeriod;
     }
 
-    // GETTERS
+    // Getters
     public List<ServiceOrder> getOrders() {
         return new ArrayList<>(orders);
     }
@@ -41,7 +41,7 @@ public class SalesReport {
         return endPeriod;
     }
 
-    // CÁLCULO DE NEGÓCIO
+    // Business calculations
     public BigDecimal calculateTotal() {
         BigDecimal total = BigDecimal.ZERO;
 
@@ -74,7 +74,7 @@ public class SalesReport {
                 .divide(BigDecimal.valueOf(count), 2, BigDecimal.ROUND_HALF_UP);
     }
 
-    // OUTPUT
+    // Output
     @Override
     public String toString() {
         return getClass().getSimpleName()

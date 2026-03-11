@@ -19,10 +19,12 @@ public record Address(String street, String number, String neighborhood, String 
         }
     }
 
+    // Formatted ZIP Code
     public String getFormattedZipCode() {
         return zipCode.substring(0, 5) + "-" + zipCode.substring(5);
     }
 
+    // Full Address
     public String getFullAddress() {
         return street() + ", " +
                 number() + " - " +
@@ -31,6 +33,7 @@ public record Address(String street, String number, String neighborhood, String 
                 getFormattedZipCode();
     }
 
+    // Address output
     @Override
     public String toString() {
         return getFullAddress();

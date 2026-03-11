@@ -21,7 +21,7 @@ public class Expense {
         setDate(date);
     }
 
-    // GETTERS E SETTERS
+    // Getters and setters
     public Long getId() {
         return id;
     }
@@ -63,7 +63,7 @@ public class Expense {
         this.date = date;
     }
 
-    // HASHCODE
+    // Hashcode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -77,7 +77,7 @@ public class Expense {
         return Objects.hash(id);
     }
 
-    // OUTPUT
+    // Output
     @Override
     public String toString() {
         return getClass().getSimpleName() +

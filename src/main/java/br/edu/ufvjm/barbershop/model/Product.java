@@ -31,7 +31,7 @@ public class Product {
         this.quantity = quantity;
     }
 
-    // GETTER E SETTERS
+    // Getters and setters
     public Long getId() {
         return id;
     }
@@ -76,7 +76,7 @@ public class Product {
         this.quantity += delta;
     }
 
-    // OUTPUT
+    // Output
     @Override
     public String toString() {
         return getClass().getSimpleName()

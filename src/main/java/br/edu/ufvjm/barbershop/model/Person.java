@@ -21,7 +21,7 @@ public abstract class Person {
         this.address = address;
     }
 
-    // GETTERS E SETTERS
+    // Getters and setters
     public Long getId() {
         return id;
     }
@@ -53,7 +53,7 @@ public abstract class Person {
         this.address = address;
     }
 
-    // OUTPUT
+    // Output
     @Override
     public String toString() {
         return getClass().getSimpleName()

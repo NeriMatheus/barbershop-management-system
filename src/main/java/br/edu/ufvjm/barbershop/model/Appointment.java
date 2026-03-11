@@ -19,7 +19,7 @@ public class Appointment {
 
     protected Appointment() {}
 
-    // CONSTRUTOR PRIVADO (BUILDER)
+    // Private constructor (Builder)
     private Appointment(Builder builder) {
         this.customer = builder.customer;
         this.employee = builder.employee;
@@ -29,10 +29,10 @@ public class Appointment {
         this.description = builder.description;
         this.status = builder.status != null
                 ? builder.status
-                : AppointmentStatus.PRE_AGENDADO;
+                : AppointmentStatus.PRE_SCHEDULED;
     }
 
-    // BUILDER
+    // Builder
     public static class Builder {
 
         private Customer customer;
@@ -92,32 +92,32 @@ public class Appointment {
         }
     }
 
-    // REGRAS DE NEGÓCIO
+    // Business rules
     public void confirm() {
         validateChange();
-        this.status = AppointmentStatus.CONFIRMADO;
+        this.status = AppointmentStatus.CONFIRMED;
     }
 
     public void complete() {
-        if (status != AppointmentStatus.CONFIRMADO) {
+        if (status != AppointmentStatus.CONFIRMED) {
             throw new IllegalStateException("Only confirmed appointments can be completed.");
         }
-        this.status = AppointmentStatus.CONCLUIDO;
+        this.status = AppointmentStatus.COMPLETED;
     }
 
     public void cancel() {
         validateChange();
-        this.status = AppointmentStatus.CANCELADO;
+        this.status = AppointmentStatus.CANCELED;
     }
 
     private void validateChange() {
-        if (status == AppointmentStatus.CANCELADO
-                || status == AppointmentStatus.CONCLUIDO) {
+        if (status == AppointmentStatus.CANCELED
+                || status == AppointmentStatus.COMPLETED) {
             throw new IllegalStateException("Appointment can no longer be modified.");
         }
     }
 
-    // GETTERS E SETTERS
+    // Getters and setters
     public Long getId() {
         return id;
     }
@@ -162,7 +162,7 @@ public class Appointment {
         return status;
     }
 
-    // HASHCODE
+    // Hashcode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -176,7 +176,7 @@ public class Appointment {
         return Objects.hash(id);
     }
 
-    // OUTPUT
+    // Output
     @Override
     public String toString() {
         return getClass().getSimpleName()

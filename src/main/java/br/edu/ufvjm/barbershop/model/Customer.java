@@ -27,14 +27,14 @@ public class Customer extends Person {
         this.cpf = cpf;
     }
 
-    // REGRAS DE NEGÓCIO
+    // Business rules
     public void addOrder(ServiceOrder order) {
         if (order == null)
             throw new IllegalArgumentException("Service order cannot be null.");
         orders.add(order);
     }
 
-    // GETTERS E SETTERS
+    // Getters and setters
     public String getEmail() {
         return email;
     }
@@ -53,7 +53,7 @@ public class Customer extends Person {
         return List.copyOf(orders);
     }
 
-    // HASHCODE
+    // Hashcode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -67,7 +67,7 @@ public class Customer extends Person {
         return Objects.hash(getId());
     }
 
-    // OUTPUT
+    // Output
     @Override
     public String toString() {
         return getClass().getSimpleName()

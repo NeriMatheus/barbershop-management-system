@@ -16,12 +16,12 @@ public record Phone(String ddi, String ddd, String number) {
         }
     }
 
-    // TELEFONE PREENCHIDO
+    // Full number
     public String getFullNumber() {
         return "+" + ddi() + "(" + ddd() + ") " + number();
     }
 
-    // OUTPUT
+    // Output
     @Override
     public String toString() {
         return getFullNumber();

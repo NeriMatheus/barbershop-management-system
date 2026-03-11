@@ -38,7 +38,7 @@ public class Station {
         return occupied;
     }
 
-    // REGRAS DE NEGÓCIO
+    // Business rules
     public void occupy(Employee employee) {
         if (occupied)
             throw new IllegalStateException("Station is already occupied");
@@ -55,7 +55,7 @@ public class Station {
         this.occupied = false;
     }
 
-    // HASHCODE
+    // Hashcode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -69,7 +69,7 @@ public class Station {
         return Objects.hash(number);
     }
 
-    // OUTPUT
+    // Output
     @Override
     public String toString() {
         return getClass().getSimpleName()

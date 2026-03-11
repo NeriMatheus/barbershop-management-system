@@ -12,7 +12,7 @@ public class Inventory {
         return new ArrayList<>(products);
     }
 
-    // REGRAS DE NEGÓCIO
+    // Business rules
     public void addProduct(Product product) {
         if (product == null)
             throw new IllegalArgumentException("Product cannot be null.");
@@ -62,7 +62,7 @@ public class Inventory {
         return products.size();
     }
 
-    // OUTPUT
+    // Output
     @Override
     public String toString() {
         return getClass().getSimpleName()

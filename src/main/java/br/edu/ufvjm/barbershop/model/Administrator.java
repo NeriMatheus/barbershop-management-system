@@ -21,7 +21,7 @@ public class Administrator extends Employee {
         return true;
     }
 
-    // OUTPUT
+    // Output
     @Override
     public String toString() {
         return getClass().getSimpleName()

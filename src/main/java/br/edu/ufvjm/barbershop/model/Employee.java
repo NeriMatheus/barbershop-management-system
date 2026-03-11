@@ -32,7 +32,7 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
-    // GETTERS E SETTERS
+    // Getters and setters
     public EmployeePosition getEmployeePosition() {
         return employeePosition;
     }
@@ -60,7 +60,7 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
-    // ALTERAR SENHA
+    // Change password
     public void changePassword(String newPassword) {
         if (newPassword == null || newPassword.isBlank()) {
             throw new IllegalArgumentException("Password hash cannot be empty.");
@@ -68,7 +68,7 @@ public class Employee extends Person {
         this.password = newPassword;
     }
 
-    // OUTPUT
+    // Output
     @Override
     public String toString() {
         return getClass().getSimpleName()
