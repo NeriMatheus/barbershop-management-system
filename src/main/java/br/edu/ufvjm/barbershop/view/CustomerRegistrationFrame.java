@@ -246,7 +246,7 @@ public class CustomerRegistrationFrame extends JFrame {
                     c.getId(),
                     c.getName(),
                     c.getEmail(),
-                    c.getCpf()
+                    c.getCpf(),
             });
         }
     }
@@ -257,7 +257,7 @@ public class CustomerRegistrationFrame extends JFrame {
         txtEmail.setText("");
         txtCpf.setText("");
 
-        txtDdi.setText("55");
+        txtDdi.setText("+55");
         txtDdd.setText("");
         txtPhoneNumber.setText("");
 

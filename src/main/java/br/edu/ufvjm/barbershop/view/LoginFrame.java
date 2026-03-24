@@ -1,7 +1,14 @@
 package br.edu.ufvjm.barbershop.view;
 
+import br.edu.ufvjm.barbershop.controller.AppointmentController;
+import br.edu.ufvjm.barbershop.controller.CustomerController;
+import br.edu.ufvjm.barbershop.controller.EmployeeController;
+import br.edu.ufvjm.barbershop.controller.FinanceController;
+import br.edu.ufvjm.barbershop.controller.ProductController;
+import br.edu.ufvjm.barbershop.controller.SalesReportController;
 import br.edu.ufvjm.barbershop.controller.ServiceController;
 import br.edu.ufvjm.barbershop.controller.ServiceOrderController;
+
 import br.edu.ufvjm.barbershop.service.BarbershopSystem;
 
 import javax.swing.*;
@@ -9,7 +16,13 @@ import java.awt.*;
 
 public class LoginFrame extends JFrame {
 
-    private final BarbershopSystem system;
+    private final AppointmentController appointmentController;
+    private final BarbershopSystem barbershopSystem;
+    private final CustomerController customerController;
+    private final EmployeeController employeeController;
+    private final FinanceController financeController;
+    private final ProductController productController;
+    private final SalesReportController salesReportController;
     private final ServiceController serviceController;
     private final ServiceOrderController serviceOrderController;
 
@@ -17,11 +30,14 @@ public class LoginFrame extends JFrame {
     private JPasswordField txtSenha;
     private JLabel lblMessage;
 
-    public LoginFrame(BarbershopSystem system,
-                      ServiceController serviceController,
-                      ServiceOrderController serviceOrderController) {
-
-        this.system = system;
+    public LoginFrame(AppointmentController appointmentController, BarbershopSystem barbershopSystem, CustomerController customerController, EmployeeController employeeController, FinanceController financeController, ProductController productController, SalesReportController salesReportController, ServiceController serviceController, ServiceOrderController serviceOrderController) {
+        this.appointmentController = appointmentController;
+        this.barbershopSystem = barbershopSystem;
+        this.employeeController = employeeController;
+        this.financeController = financeController;
+        this.productController = productController;
+        this.salesReportController = salesReportController;
+        this.customerController = customerController;
         this.serviceController = serviceController;
         this.serviceOrderController = serviceOrderController;
 
@@ -69,7 +85,13 @@ public class LoginFrame extends JFrame {
 
     private void enter() {
         MainFrame mainFrame = new MainFrame(
-                system,
+                appointmentController,
+                barbershopSystem,
+                customerController,
+                employeeController,
+                financeController,
+                productController,
+                salesReportController,
                 serviceController,
                 serviceOrderController
         );

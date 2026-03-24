@@ -7,11 +7,11 @@ public class AppointmentController {
 
     private final BarbershopSystem system;
 
-    public AppointmentController(BarbershopSystem system) {
-        if (system == null) {
+    public AppointmentController(BarbershopSystem barbershopSystem) {
+        if (barbershopSystem == null) {
             throw new IllegalArgumentException("BarbershopSystem is required.");
         }
-        this.system = system;
+        this.system = barbershopSystem;
     }
 
     // Secondary Queue
