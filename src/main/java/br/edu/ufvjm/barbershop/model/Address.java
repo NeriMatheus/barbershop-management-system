@@ -26,11 +26,7 @@ public record Address(String street, String number, String neighborhood, String 
 
     // Full Address
     public String getFullAddress() {
-        return street() + ", " +
-                number() + " - " +
-                neighborhood() + " - " +
-                city() + " - ZIP: " +
-                getFormattedZipCode();
+        return street() + ", " + number() + " - " + neighborhood() + " - " + city() + " - ZIP: " + getFormattedZipCode();
     }
 
     // Address output

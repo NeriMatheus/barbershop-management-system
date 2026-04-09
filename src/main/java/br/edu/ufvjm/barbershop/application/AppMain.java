@@ -1,4 +1,4 @@
-package br.edu.ufvjm.barbershop.app;
+package br.edu.ufvjm.barbershop.application;
 
 import br.edu.ufvjm.barbershop.controller.AppointmentController;
 import br.edu.ufvjm.barbershop.controller.CustomerController;

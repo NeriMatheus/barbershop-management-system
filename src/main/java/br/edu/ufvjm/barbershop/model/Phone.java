@@ -9,9 +9,7 @@ package br.edu.ufvjm.barbershop.model;
 public record Phone(String ddi, String ddd, String number) {
 
     public Phone {
-        if (ddi == null || ddi.isBlank() ||
-                ddd == null || ddd.isBlank() ||
-                number == null || number.isBlank()) {
+        if (ddi == null || ddi.isBlank() || ddd == null || ddd.isBlank() || number == null || number.isBlank()) {
             throw new IllegalArgumentException("DDI, DDD and number must be informed.");
         }
     }
