@@ -15,7 +15,7 @@ import br.edu.ufvjm.barbershop.view.LoginFrame;
 
 import javax.swing.SwingUtilities;
 
-public class AppMain {
+public class Main {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
